@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(315deg, rgb(90, 0, 143) 3%, rgb(255, 255, 0) 38%, rgb(6, 184, 0) 68%, rgb(0, 41, 131) 98%);
+  
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    margin: 2rem;
+    color: #000;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(177, 255, 146);
+    border: 3px solid purple;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+caption {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+thead {
+    background-color: #3b004d;
+    color: #fff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(189, 130, 238);
+}
+
+tr:hover {
+    background-color: royalblue;
+    color: rgb(255, 194, 194);
+    cursor: pointer;
+}
+
+.wave {
+    background: rgb(162, 0, 255);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
+}
+
+iframe {
+    display: block;
+    margin: 5rem auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    max-width: 90%;
+}
+
+iframe:hover{
+    transform: scale(1.45);
+    transition: 0.5s ease;
+}
+
+
+footer {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    background-color: rgb(128, 0, 255);
+    color: rgb(127, 255, 0);
+    padding: 2rem;
+    border-top: 5px solid #000;
+}
